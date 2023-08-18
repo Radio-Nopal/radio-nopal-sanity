@@ -1,22 +1,25 @@
-import blockContent from './blockContent'
-import crewMember from './crewMember'
-import castMember from './castMember'
-import movie from './movie'
-import person from './person'
-import screening from './screening'
-import plotSummary from './plotSummary'
-import plotSummaries from './plotSummaries'
+import blockContent from './otherTypes/blockContent'
+import contenidoDePagina from './otherTypes/contenidoDePagina'
+import programa from './programa'
+import mixcloudLink from './otherTypes/mixcloudLink'
+import imagen from './otherTypes/imagen'
+import columnasDeContenidoDePagina from './otherTypes/columnasDeContenidoDePagina'
+import contacto from './otherTypes/contacto'
+import persona from './persona'
+import pagina from './pagina'
 
 export const schemaTypes = [
   // Document types
-  movie,
-  person,
-  screening,
+  pagina,
+  programa,
+  persona,
+
 
   // Other types
+  imagen,
+  mixcloudLink,
+  contacto,
   blockContent,
-  plotSummary,
-  plotSummaries,
-  castMember,
-  crewMember,
+  contenidoDePagina,
+  columnasDeContenidoDePagina,
 ]
