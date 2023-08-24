@@ -26,8 +26,8 @@ export default defineType({
           */
           const {width, height} = getImageDimensions(value.asset._ref)
     
-          if (width > 1200 || height > 650) {
-            return 'Image must be least than 1200x650 pixels'
+          if (width > 1600 || height > 1000) {
+            return 'La imagen debe ser más pequeña de 1600x1000 pixeles'
           }
     
           return true
