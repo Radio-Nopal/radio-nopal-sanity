@@ -1,12 +1,10 @@
 import {defineField, defineType} from 'sanity'
-import {MdPerson as icon} from 'react-icons/md'
 import { getImageDimensions } from '@sanity/asset-utils'
 
 export default defineType({
     title: 'Imagen',
     name: 'imagen',
     type: 'object',
-    icon,
     fields: [
       defineField({
         name: 'imagen',
