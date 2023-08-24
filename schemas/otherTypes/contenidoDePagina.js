@@ -1,9 +1,11 @@
 import {defineField, defineType} from 'sanity'
+import {MdEmail as icon} from 'react-icons/md'
 
 export default defineType({
     title: 'Contenido de página',
     name: 'contenidoDePagina',
     type: 'object',
+    icon,
     fields: [
       defineField({
         name: 'titulo',

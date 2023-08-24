@@ -1,4 +1,5 @@
 import {defineField, defineType} from 'sanity'
+import {MdAudiotrack as icon} from 'react-icons/md'
 
 export default defineType({
     title: 'Link de Mixcloud',
@@ -28,7 +29,8 @@ export default defineType({
       },
       prepare(selection) {
         return {
-          title: `${selection.fecha} - ${selection.descripcion}`,          
+          title: `${selection.fecha} - ${selection.descripcion}`,
+          icon
         }
       },
     },

@@ -1,9 +1,11 @@
 import {defineField, defineType} from 'sanity'
+import {MdPerson as icon} from 'react-icons/md'
 
 export default defineType({
   name: 'persona',
   title: 'Persona',
   type: 'document',
+  icon,
   fields: [
     defineField({
       name: 'nombre',

@@ -1,9 +1,11 @@
 import {defineField, defineType} from 'sanity'
+import {MdRadio as icon} from 'react-icons/md'
 
 export default defineType({
   name: 'programa',
   title: 'Programa',
   type: 'document',
+  icon,
   initialValue: {
     archivado: false
   },
