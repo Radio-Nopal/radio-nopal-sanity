@@ -5,6 +5,7 @@ import mixcloudLink from './otherTypes/mixcloudLink'
 import imagen from './otherTypes/imagen'
 import columnasDeContenidoDePagina from './otherTypes/columnasDeContenidoDePagina'
 import contacto from './otherTypes/contacto'
+import imageGallery from './otherTypes/image-gallery'
 import persona from './persona'
 import pagina from './pagina'
 
@@ -22,4 +23,5 @@ export const schemaTypes = [
   blockContent,
   contenidoDePagina,
   columnasDeContenidoDePagina,
+  imageGallery,
 ]

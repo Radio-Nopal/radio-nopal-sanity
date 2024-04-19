@@ -12,18 +12,21 @@ export default defineType({
         name: 'imagen',
         type: 'image',
         title: 'Imagen',
+        /*
         validation: (rule) =>
         rule.custom((value) => {
           if (!value) {
             return true
           }
-          /*
-          const filetype = getExtension(value.asset._ref)
+        
+
+
+          // const filetype = getExtension(value.asset._ref)
     
-          if (filetype !== 'jpg' && filetype !== 'png') {
-            return 'Image must be a JPG or PNG'
-          }
-          */
+          //if (filetype !== 'jpg' && filetype !== 'png') {
+            // return 'Image must be a JPG or PNG'
+          //}
+          
           const {width, height} = getImageDimensions(value.asset._ref)
     
           if (width > 1600 || height > 1000) {
@@ -32,6 +35,7 @@ export default defineType({
     
           return true
         }),
+        */
       }),
       defineField({
         name: 'alt',

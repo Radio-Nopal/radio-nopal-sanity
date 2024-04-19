@@ -1,5 +1,6 @@
 import {defineField, defineType} from 'sanity'
 import {MdRadio as icon} from 'react-icons/md'
+import hoursUtil from './hoursUtil';
 
 export default defineType({
   name: 'programa',
@@ -39,22 +40,47 @@ export default defineType({
       type: 'blockContent',
     }),
     defineField({
+      name: 'fechasLegacy',
+      title: 'Fechas (dato importado de wordpress)',
+      type: 'string',
+    }),
+    defineField({
       name: 'dias',
       title: 'Días',
       type: 'string',
-      fieldset: "horario"
+      fieldset: "horario",
+      options: {
+        list: [
+          { title: "Lunes", value: "lunes" },
+          { title: "Martes", value: "martes" },
+          { title: "Miércoles", value: "miercoles" },
+          { title: "Jueves", value: "jueves" },
+          { title: "Viernes", value: "viernes" },
+          { title: "Sábado", value: "sabado" },
+          { title: "Domingo", value: "domingo" }
+        ]
+      },
     }),
     defineField({
       name: 'hora',
       title: 'Hora',
       type: 'string',
-      fieldset: "horario"
+      fieldset: "horario",
+      options: { list: hoursUtil }
     }),
     defineField({
       name: 'periodicidad',
       title: 'Periodicidad',
       type: 'string',
-      fieldset: "horario"
+      fieldset: "horario",
+      options: {
+        list: [
+          { title: "Diario", value: "diario" },
+          { title: "Semanal", value: "semanal" },
+          { title: "Quincenal", value: "quincenal" },
+          { title: "Mensual", value: "mensual" }
+        ]
+      },
     }),
     defineField({
       name: 'imagenes',
@@ -75,9 +101,15 @@ export default defineType({
     }),
     defineField({
       name: 'archivoMixcloud',
-      title: 'Archivo Mixcloud',
+      title: 'playlist de Mixcloud',
       type: 'array',
       of: [{type: 'mixcloudLink'}],
+    }),
+    defineField({
+      name: 'mixcloudIframeLinks',
+      title: 'programas de mixcloud',
+      type: 'array',
+      of: [{type: 'string'}],
     }),
     defineField({
       name: 'mediosDeContacto',
