@@ -66,5 +66,18 @@ export default defineType({
     defineArrayMember({
       type: 'imageGallery',
     }),
+    defineArrayMember({
+      type: 'object',
+      name: 'embed',
+      title: 'Embed',
+      fields: [
+        {
+          name: 'iframeHtml',
+          type: 'text',
+          title: 'Iframe HTML',
+          description: 'Pega el código HTML completo del iframe aquí.',
+        },
+      ],
+    }),
   ],
 })
