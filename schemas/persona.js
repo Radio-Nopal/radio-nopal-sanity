@@ -44,6 +44,12 @@ export default defineType({
       type: 'array',
       of: [{type: 'contacto'}],
     }),
+    defineField({
+      name: 'archivado',
+      title: 'Archivado',
+      type: 'boolean',
+      description: 'Activar para las personas que ya no están colaborando.'
+    }),
   ],
   preview: {
     select: {title: 'nombre', media: 'fotos.0.imagen'},
