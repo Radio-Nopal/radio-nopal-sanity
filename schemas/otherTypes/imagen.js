@@ -41,6 +41,11 @@ export default defineType({
         name: 'alt',
         type: 'string',
         title: 'texto alternativo',
+      }),
+      defineField({
+        name: 'enlace',
+        type: 'string',
+        title: 'Enlace',
       })
     ]
   })
