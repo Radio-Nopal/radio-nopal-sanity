@@ -8,12 +8,14 @@ import contacto from './otherTypes/contacto'
 import imageGallery from './otherTypes/image-gallery'
 import persona from './persona'
 import pagina from './pagina'
+import lugaresQueNosApoyan from './lugaresQueNosApoyan'
 
 export const schemaTypes = [
   // Document types
   pagina,
   programa,
   persona,
+  lugaresQueNosApoyan,
 
 
   // Other types

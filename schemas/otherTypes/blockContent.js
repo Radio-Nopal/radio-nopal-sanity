@@ -70,6 +70,9 @@ export default defineType({
       options: {hotspot: true},
     }),
     defineArrayMember({
+      type: 'imagen',
+    }),
+    defineArrayMember({
       type: 'imageGallery',
     }),
     defineArrayMember({

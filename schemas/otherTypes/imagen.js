@@ -3,7 +3,7 @@ import {MdPerson as icon} from 'react-icons/md'
 import { getImageDimensions } from '@sanity/asset-utils'
 
 export default defineType({
-    title: 'Imagen',
+    title: 'Imagen con link',
     name: 'imagen',
     type: 'object',
     icon,
@@ -12,6 +12,7 @@ export default defineType({
         name: 'imagen',
         type: 'image',
         title: 'Imagen',
+        options: { hotspot: true },
         /*
         validation: (rule) =>
         rule.custom((value) => {
@@ -46,7 +47,13 @@ export default defineType({
         name: 'enlace',
         type: 'string',
         title: 'Enlace',
-      })
+      }),
+      defineField({
+        title: 'Abrir en nueva pestaña',
+        name: 'linkTarget',
+        type: 'boolean',
+        initialValue: true,
+      }),
     ]
   })
 
