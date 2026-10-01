@@ -11,7 +11,7 @@ export default defineType({
       name: 'titulo',
       title: 'Título',
       type: 'string',
-      validation: Rule => Rule.required(),
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'descripcionDePagina',
@@ -22,16 +22,16 @@ export default defineType({
       name: 'slug',
       title: 'Slug',
       type: 'slug',
-      validation: Rule => Rule.required(),
+      validation: (Rule) => Rule.required(),
       options: {
-        source: 'nombre',
+        source: 'titulo',
         maxLength: 100,
       },
     }),
     defineField({
       name: 'colorFondo',
       title: 'Color de fondo',
-      type: 'color'
+      type: 'color',
     }),
     defineField({
       name: 'imagenesCabecera',
@@ -48,5 +48,5 @@ export default defineType({
   ],
   preview: {
     select: {title: 'titulo', media: 'imagenesCabecera.0.imagen'},
-  }
+  },
 })
