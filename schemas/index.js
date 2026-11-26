@@ -9,6 +9,8 @@ import imageGallery from './otherTypes/image-gallery'
 import persona from './persona'
 import pagina from './pagina'
 import lugaresQueNosApoyan from './lugaresQueNosApoyan'
+import product from './product'
+
 
 export const schemaTypes = [
   // Document types
@@ -16,7 +18,7 @@ export const schemaTypes = [
   programa,
   persona,
   lugaresQueNosApoyan,
-
+  product,
 
   // Other types
   imagen,
